@@ -1,0 +1,13 @@
+faizypython_monitor_CL
+| lookup faizypython_monitor_CL on RawData
+| where RawData contains "No"
+
+
+process_CL
+| lookup process_CL on RawData
+| where RawData contains "dead"
+
+
+process_CL
+| lookup process_CL on Message
+| where Message contains "dead"
